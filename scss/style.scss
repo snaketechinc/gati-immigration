@@ -410,6 +410,9 @@ body{
         background: url("../images/icons/right-arrow.svg")no-repeat;
         background-position: top 15px left 0;
         padding: 0.5rem 0 0.5rem 0;
+        @media only screen and (max-width: 767px) {
+          background-position: top 14px left 0;
+        }
         a{
           font-size: 16px;
           padding-left: 16px;
