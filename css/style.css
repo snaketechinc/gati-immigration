@@ -101,19 +101,59 @@ body {
       font-size: 24px;
       line-height: 30px; } }
 
+.sub-title-two {
+  font-family: var(--gilroymedium);
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 1rem;
+  color: var(--darkblue);
+  display: block; }
+  @media only screen and (max-width: 1199px) {
+    .sub-title-two {
+      font-size: 26px;
+      line-height: 32px; } }
+  @media only screen and (max-width: 991px) {
+    .sub-title-two {
+      font-size: 22px;
+      line-height: 30px; } }
+  @media only screen and (max-width: 767px) {
+    .sub-title-two {
+      font-size: 20px;
+      line-height: 26px; } }
+
+.third-title {
+  font-family: var(--gilroymedium);
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 1rem;
+  color: var(--darkblue);
+  display: block; }
+  @media only screen and (max-width: 767px) {
+    .third-title {
+      font-size: 18px;
+      line-height: 24px; } }
+
 .para-text {
   font-family: var(--gilroymedium);
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 1rem;
   color: var(--darkblue);
-  opacity: 0.8; }
+  opacity: 0.9; }
+  @media only screen and (max-width: 575px) {
+    .para-text {
+      font-size: 15px;
+      line-height: 24px; } }
+  @media only screen and (max-width: 991px) {
+    .para-text {
+      font-size: 16px;
+      line-height: 26px; } }
 
 .mt-146 {
   margin-top: 146px; }
   @media only screen and (max-width: 991px) {
     .mt-146 {
-      margin-top: 134px; } }
+      margin-top: 129px; } }
   @media only screen and (max-width: 575px) {
     .mt-146 {
       margin-top: 124px; } }
@@ -166,10 +206,13 @@ body {
       width: 200px; }
       @media only screen and (max-width: 991px) {
         .section-navbar .navbar .navbar-brand img {
-          width: 180px; } }
+          width: 160px; } }
       @media only screen and (max-width: 575px) {
         .section-navbar .navbar .navbar-brand img {
           width: 160px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .section-navbar .navbar .navbar-nav {
+        padding-bottom: 0; } }
     .section-navbar .navbar .navbar-nav .nav-item.active .nav-link {
       color: #BD0000; }
       .section-navbar .navbar .navbar-nav .nav-item.active .nav-link:after {
@@ -178,9 +221,15 @@ body {
     .section-navbar .navbar .navbar-nav .nav-item {
       padding: 0.5rem 0.5rem;
       margin-right: 1rem; }
+      .section-navbar .navbar .navbar-nav .nav-item:nth-child(2) {
+        display: none; }
       @media only screen and (min-width: 992px) and (max-width: 1299px) {
         .section-navbar .navbar .navbar-nav .nav-item {
-          padding: 0.5rem 0.25rem; } }
+          padding: 0.5rem 0.25rem;
+          margin-right: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .section-navbar .navbar .navbar-nav .nav-item {
+          margin-right: 0; } }
       .section-navbar .navbar .navbar-nav .nav-item .nav-link {
         font-size: 16px;
         font-family: var(--gilroymedium);
@@ -212,6 +261,9 @@ body {
         margin-left: 1rem;
         margin-right: 0;
         box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3); }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .section-navbar .navbar .navbar-nav .nav-item:last-child {
+            padding: 0.5rem 0.5rem 0.6rem; } }
         @media only screen and (max-width: 991px) {
           .section-navbar .navbar .navbar-nav .nav-item:last-child {
             margin-left: 0; } }
@@ -249,17 +301,20 @@ body {
       .section-footer .container {
         padding-top: 3rem; } }
   .section-footer .footer-cols {
-    width: 37%;
+    width: 50%;
     padding: 0 50px 0 15px; }
     @media only screen and (max-width: 991px) {
       .section-footer .footer-cols {
         width: 100%; } }
+  @media only screen and (max-width: 768px) {
+    .section-footer .footer-cols-multiple:last-child {
+      width: 100%; } }
   .section-footer .footer-cols-multiple {
-    width: 21%;
+    width: 25%;
     padding: 0 15px; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .section-footer .footer-cols-multiple {
-        width: 33.3333%; } }
+        width: 50%; } }
     @media only screen and (max-width: 767px) {
       .section-footer .footer-cols-multiple {
         width: 50%; } }
@@ -326,8 +381,8 @@ body {
       padding: 0.4rem 0; }
       .section-footer .footer-details-address ul li:first-child {
         background: url("../images/icons/location.svg") no-repeat;
-        background-position: top 13px left 0;
-        padding-left: 26px;
+        background-position: top 10px left 0;
+        padding-left: 28px;
         font-size: 16px;
         font-family: var(--gilroymedium);
         line-height: 26px;
@@ -357,7 +412,7 @@ body {
           color: #fff !important; }
       .section-footer .footer-details-address ul li a {
         font-size: 16px;
-        padding-left: 26px;
+        padding-left: 28px;
         font-family: var(--gilroymedium);
         line-height: 16px;
         color: #fff;
@@ -523,6 +578,16 @@ body {
 @media only screen and (max-width: 575px) {
   .section-about .about-right {
     padding: 2rem 0; } }
+
+.section-about .about-right ul {
+  padding: 0;
+  display: block;
+  margin: 2rem 0; }
+  .section-about .about-right ul li {
+    list-style: none;
+    background: url("../images/icons/tick.svg") no-repeat;
+    background-position: top 6px left 0;
+    padding-left: 22px; }
 
 .section-about .achievement {
   margin: 2rem 0 2rem; }
@@ -690,6 +755,10 @@ body {
       background-color: #fff;
       padding: 20px 15px 25px;
       border-radius: 10px; }
+      @media only screen and (max-width: 575px) {
+        .section-testimonial .testimonial-slider .testimonial_carousel .item .testimonial-main .para-text {
+          font-size: 15px;
+          line-height: 24px; } }
     .section-testimonial .testimonial-slider .testimonial_carousel .item .media .media-body h5 {
       font-family: var(--gilroymedium);
       font-size: 18px;
@@ -710,10 +779,12 @@ body {
       height: 65px;
       border-radius: 99em;
       overflow: hidden; }
-    .section-testimonial .testimonial-slider .testimonial_carousel .item .start span {
-      display: inline-block; }
-      .section-testimonial .testimonial-slider .testimonial_carousel .item .start span img {
-        width: 14px; }
+    .section-testimonial .testimonial-slider .testimonial_carousel .item .start {
+      float: right; }
+      .section-testimonial .testimonial-slider .testimonial_carousel .item .start span {
+        display: inline-block; }
+        .section-testimonial .testimonial-slider .testimonial_carousel .item .start span img {
+          width: 14px; }
     .section-testimonial .testimonial-slider .owl-dots .owl-dot {
       margin: 2rem 0 0 0; }
       .section-testimonial .testimonial-slider .owl-dots .owl-dot span {
@@ -728,3 +799,516 @@ body {
 
 /*--- section testimonial end ---*/
 /*------------------------------- home page end -------------------------------*/
+/*------------------------------- home canada start -------------------------------*/
+/*--- section sub-banner start ---*/
+.section-why-canada-banner {
+  background: url("../images/why-canada-bg.png") no-repeat;
+  background-size: cover;
+  height: 450px; }
+  @media only screen and (max-width: 1199px) {
+    .section-why-canada-banner {
+      background-position: top 0 left 25%;
+      height: 350px; } }
+  @media only screen and (max-width: 767px) {
+    .section-why-canada-banner {
+      background-position: top 0 left 25%;
+      height: 300px; } }
+  .section-why-canada-banner .banner-text {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px; }
+    .section-why-canada-banner .banner-text h1 {
+      font-family: var(--gilroybold);
+      font-size: 60px;
+      line-height: 68px;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      display: block; }
+      @media only screen and (max-width: 1499px) {
+        .section-why-canada-banner .banner-text h1 {
+          font-size: 54px;
+          line-height: 60px; } }
+      @media only screen and (max-width: 1199px) {
+        .section-why-canada-banner .banner-text h1 {
+          font-size: 48px;
+          line-height: 58px; } }
+      @media only screen and (max-width: 767px) {
+        .section-why-canada-banner .banner-text h1 {
+          font-size: 40px;
+          line-height: 48px; } }
+      .section-why-canada-banner .banner-text h1 span {
+        font-family: var(--gilroymedium); }
+    .section-why-canada-banner .banner-text p {
+      margin: 1.2rem 0 0.4rem;
+      max-width: 320px; }
+    .section-why-canada-banner .banner-text a {
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      margin: 1.5rem 0;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #FFF;
+      padding: 14px 40px;
+      text-align: center;
+      border-radius: 6px;
+      background-color: #bd0000;
+      transition: all 400ms; }
+      .section-why-canada-banner .banner-text a:hover {
+        text-decoration: none;
+        background-color: rgba(189, 0, 0, 0.8);
+        transition: all 400ms; }
+
+/*--- section banner start ---*/
+/*--- section canada-about start ---*/
+.section-canada-about .about-left {
+  width: 90%; }
+  @media only screen and (max-width: 767px) {
+    .section-canada-about .about-left {
+      width: 100%; } }
+
+@media only screen and (max-width: 1499px) {
+  .section-canada-about .about-right {
+    padding: 5rem 0; } }
+
+@media only screen and (max-width: 1199px) {
+  .section-canada-about .about-right {
+    padding: 4rem 0; } }
+
+@media only screen and (max-width: 991px) {
+  .section-canada-about .about-right {
+    padding: 3rem 0 0; } }
+
+@media only screen and (max-width: 575px) {
+  .section-canada-about .about-right {
+    padding: 2rem 0; } }
+
+.section-canada-about .achievement {
+  margin: 2rem 0 2rem; }
+  .section-canada-about .achievement .achivement-box {
+    width: 30%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid transparent; }
+    @media only screen and (max-width: 991px) {
+      .section-canada-about .achievement .achivement-box {
+        padding: 15px 10px; } }
+    @media only screen and (max-width: 575px) {
+      .section-canada-about .achievement .achivement-box {
+        padding: 15px 10px; } }
+    .section-canada-about .achievement .achivement-box:hover {
+      border: 1px solid #bd0000;
+      background-color: #bd0000;
+      transition: all 400ms; }
+      .section-canada-about .achievement .achivement-box:hover h4 {
+        color: #fff;
+        opacity: 1;
+        transition: all 400ms; }
+    .section-canada-about .achievement .achivement-box .icons-box {
+      margin-bottom: 1rem; }
+    .section-canada-about .achievement .achivement-box h4 {
+      font-family: var(--gilroymedium);
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 0;
+      color: var(--darkblue);
+      opacity: 0.7;
+      transition: all 400ms; }
+      @media only screen and (max-width: 991px) {
+        .section-canada-about .achievement .achivement-box h4 {
+          font-size: 12px;
+          line-height: 18px; } }
+      @media only screen and (max-width: 575px) {
+        .section-canada-about .achievement .achivement-box h4 {
+          font-size: 12px;
+          line-height: 18px; } }
+      .section-canada-about .achievement .achivement-box h4 span {
+        display: block; }
+
+.bg-light-new {
+  background-color: #f5f5f5; }
+
+.canada-about-accordian h3 {
+  padding: 20px 15px 0 15px; }
+
+.canada-about-accordian .accordion {
+  margin: 15px 0; }
+  .canada-about-accordian .accordion .card {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 20px; }
+    .canada-about-accordian .accordion .card h2 {
+      background: #bd0000 url("../images/icons/down-arrow.svg") no-repeat calc(100% - 10px) center;
+      background-size: 20px;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 15px;
+      color: #fff; }
+      .canada-about-accordian .accordion .card h2.collapsed {
+        /*background-image: url("../images/icons/right-arrow.svg")no-repeat;*/
+        background: #bd0000 url("../images/icons/right-arroww.svg") no-repeat calc(100% - 10px) center;
+        background-size: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 15px;
+        color: #fff; }
+    .canada-about-accordian .accordion .card-body {
+      margin: 0; }
+
+/*--- section canada-about end ---*/
+/*------------------------------- home canada end -------------------------------*/
+/*------------------------------- services page start -------------------------------*/
+/*--- section sub-banner start ---*/
+.section-services-banner {
+  background: url("../images/service-bg.png") no-repeat;
+  background-size: cover;
+  height: 450px; }
+  @media only screen and (max-width: 1199px) {
+    .section-services-banner {
+      background-position: top 0 left 25%;
+      height: 350px; } }
+  @media only screen and (max-width: 767px) {
+    .section-services-banner {
+      background-position: top 0 left 25%;
+      height: 300px; } }
+  .section-services-banner .banner-text {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px; }
+    .section-services-banner .banner-text h1 {
+      font-family: var(--gilroybold);
+      font-size: 60px;
+      line-height: 68px;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      display: block;
+      text-align: center; }
+      @media only screen and (max-width: 1499px) {
+        .section-services-banner .banner-text h1 {
+          font-size: 54px;
+          line-height: 60px; } }
+      @media only screen and (max-width: 1199px) {
+        .section-services-banner .banner-text h1 {
+          font-size: 48px;
+          line-height: 58px; } }
+      @media only screen and (max-width: 767px) {
+        .section-services-banner .banner-text h1 {
+          font-size: 40px;
+          line-height: 48px; } }
+      .section-services-banner .banner-text h1 span {
+        font-family: var(--gilroymedium); }
+    .section-services-banner .banner-text p {
+      margin: 1.2rem 0 0.4rem;
+      max-width: 320px; }
+    .section-services-banner .banner-text a {
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      margin: 1.5rem 0;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #FFF;
+      padding: 14px 40px;
+      text-align: center;
+      border-radius: 6px;
+      background-color: #bd0000;
+      transition: all 400ms; }
+      .section-services-banner .banner-text a:hover {
+        text-decoration: none;
+        background-color: rgba(189, 0, 0, 0.8);
+        transition: all 400ms; }
+
+/*--- section banner start ---*/
+/*--- section why-choose start ---*/
+.section-servicepage-why-choose .why-left {
+  width: 90%; }
+  @media only screen and (max-width: 767px) {
+    .section-servicepage-why-choose .why-left {
+      width: 100%; } }
+
+@media only screen and (max-width: 1499px) {
+  .section-servicepage-why-choose .why-right {
+    padding: 5rem 0; } }
+
+@media only screen and (max-width: 1199px) {
+  .section-servicepage-why-choose .why-right {
+    padding: 4rem 0; } }
+
+@media only screen and (max-width: 991px) {
+  .section-servicepage-why-choose .why-right {
+    padding: 3rem 0 0; } }
+
+@media only screen and (max-width: 575px) {
+  .section-servicepage-why-choose .why-right {
+    padding: 0; } }
+
+.section-servicepage-why-choose .why-right h3 {
+  font-family: var(--gilroymedium);
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--darkblue);
+  margin: 1rem 0 1rem; }
+  @media only screen and (max-width: 991px) {
+    .section-servicepage-why-choose .why-right h3 {
+      font-size: 20px;
+      line-height: 30px; } }
+  @media only screen and (max-width: 767px) {
+    .section-servicepage-why-choose .why-right h3 {
+      font-size: 18px;
+      line-height: 26px; } }
+
+.section-servicepage-why-choose .why-right ul {
+  padding: 0;
+  display: block; }
+  .section-servicepage-why-choose .why-right ul li {
+    list-style: none;
+    background: url("../images/icons/tick.svg") no-repeat;
+    background-position: top 6px left 0;
+    padding-left: 22px; }
+
+/*--- section why-choose end ---*/
+/*------------------------------- services us page start -------------------------------*/
+/*------------------------------- contact us page start -------------------------------*/
+/*--- section sub-banner start ---*/
+.section-contactus-banner {
+  background: url("../images/contact-us-bg.png") no-repeat;
+  background-size: cover;
+  height: 450px; }
+  @media only screen and (max-width: 1199px) {
+    .section-contactus-banner {
+      background-position: top 0 left 25%;
+      height: 350px; } }
+  @media only screen and (max-width: 767px) {
+    .section-contactus-banner {
+      background-position: top 0 left 25%;
+      height: 300px; } }
+  .section-contactus-banner .banner-text {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px; }
+    .section-contactus-banner .banner-text h1 {
+      font-family: var(--gilroybold);
+      font-size: 60px;
+      line-height: 68px;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      display: block;
+      text-align: center; }
+      @media only screen and (max-width: 1499px) {
+        .section-contactus-banner .banner-text h1 {
+          font-size: 54px;
+          line-height: 60px; } }
+      @media only screen and (max-width: 1199px) {
+        .section-contactus-banner .banner-text h1 {
+          font-size: 48px;
+          line-height: 58px; } }
+      @media only screen and (max-width: 767px) {
+        .section-contactus-banner .banner-text h1 {
+          font-size: 40px;
+          line-height: 48px; } }
+      .section-contactus-banner .banner-text h1 span {
+        font-family: var(--gilroymedium); }
+    .section-contactus-banner .banner-text p {
+      margin: 1.2rem 0 0.4rem;
+      max-width: 320px; }
+    .section-contactus-banner .banner-text a {
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      margin: 1.5rem 0;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #FFF;
+      padding: 14px 40px;
+      text-align: center;
+      border-radius: 6px;
+      background-color: #bd0000;
+      transition: all 400ms; }
+      .section-contactus-banner .banner-text a:hover {
+        text-decoration: none;
+        background-color: rgba(189, 0, 0, 0.8);
+        transition: all 400ms; }
+
+/*--- section banner start ---*/
+.contactus-page {
+  margin: 50px 0 0 0; }
+  @media only screen and (max-width: 1199px) {
+    .contactus-page {
+      margin-top: 20px; } }
+  @media only screen and (max-width: 575px) {
+    .contactus-page {
+      margin-top: -30px; } }
+  .contactus-page ul {
+    margin: 0;
+    padding: 0; }
+    .contactus-page ul li {
+      list-style: none;
+      padding: 0.4rem 0; }
+      .contactus-page ul li:first-child {
+        background: url("../images/icons/red-location.svg") no-repeat;
+        background-position: top 10px left 0;
+        padding-left: 28px;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9; }
+      .contactus-page ul li:nth-of-type(2) {
+        background: url("../images/icons/red-www.svg") no-repeat;
+        background-position: top 13px left 0;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9; }
+      .contactus-page ul li:nth-of-type(3) {
+        background: url("../images/icons/red-mail.svg") no-repeat;
+        background-position: top 10px left 0;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9; }
+      .contactus-page ul li:nth-of-type(4) {
+        background: url("../images/icons/red-phone.svg") no-repeat;
+        background-position: top 13px left 0;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9; }
+        .contactus-page ul li:nth-of-type(4) a {
+          /*&:hover{
+            color: #fff !important;
+          }*/ }
+      .contactus-page ul li a {
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9;
+        padding-left: 28px;
+        transition: all 400ms; }
+        .contactus-page ul li a:hover {
+          color: #BD0000;
+          text-decoration: none;
+          opacity: 1;
+          transition: all 400ms; }
+
+/*--- section why-choose start ---*/
+.section-heythere-contact .why-left {
+  width: 90%; }
+  @media only screen and (max-width: 767px) {
+    .section-heythere-contact .why-left {
+      width: 100%; } }
+
+@media only screen and (max-width: 767px) {
+  .section-heythere-contact .why-right {
+    padding: 3rem 0 0; } }
+
+@media only screen and (max-width: 575px) {
+  .section-heythere-contact .why-right {
+    padding: 2rem 0; } }
+
+.section-heythere-contact .why-right h3 {
+  font-family: var(--gilroymedium);
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--darkblue);
+  margin: 1rem 0 1rem; }
+
+.section-heythere-contact .why-right ul {
+  padding: 0;
+  display: block; }
+  .section-heythere-contact .why-right ul li {
+    list-style: none;
+    background: url("../images/icons/tick.svg") no-repeat;
+    background-position: top 6px left 0;
+    padding-left: 22px; }
+
+/*--- section why-choose end ---*/
+/*--- contact form start ---*/
+.contact-form {
+  padding: 20px 20px 30px 20px;
+  background-color: #bd0000; }
+  .contact-form h3 {
+    font-family: var(--gilroymedium);
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    display: block; }
+  .contact-form form .form-group {
+    margin-bottom: 1.5rem; }
+    .contact-form form .form-group .form-control {
+      border-radius: 0;
+      height: calc(1.8em + 0.9rem + 4px);
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      color: var(--darkblue); }
+      .contact-form form .form-group .form-control:focus {
+        outline: none;
+        box-shadow: none; }
+    .contact-form form .form-group .form-control-message {
+      border-radius: 0;
+      width: 100%;
+      resize: none;
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      color: var(--darkblue);
+      padding: 0.6rem; }
+      .contact-form form .form-group .form-control-message:focus {
+        outline: none;
+        box-shadow: none; }
+    .contact-form form .form-group ::placeholder {
+      opacity: 0.8; }
+
+/*--- contact form end ---*/
+.responsive-map {
+  margin-top: 6rem; }
+  @media only screen and (max-width: 1199px) {
+    .responsive-map {
+      margin-top: 3rem; } }
+  @media only screen and (max-width: 575px) {
+    .responsive-map {
+      margin-top: 2rem; } }
+  .responsive-map iframe {
+    width: 100%; }
+
+.submit-btn {
+  font-family: var(--gilroymedium);
+  font-size: 18px;
+  line-height: 26px;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #FFF;
+  padding: 14px 40px;
+  text-align: center;
+  border-radius: 6px;
+  color: #bd0000;
+  background-color: #fff;
+  transition: all 400ms; }
+  .submit-btn:hover {
+    text-decoration: none;
+    color: #bd0000;
+    background-color: #fff;
+    transition: all 400ms; }
+
+/*------------------------------- contact us page end -------------------------------*/

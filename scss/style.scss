@@ -112,19 +112,59 @@ body{
     line-height: 30px;
   }
 }
+.sub-title-two{
+  font-family: var(--gilroymedium);
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 1rem;
+  color: var(--darkblue);
+  display: block;
+  @media only screen and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  @media only screen and (max-width: 991px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.third-title{
+  font-family: var(--gilroymedium);
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 1rem;
+  color: var(--darkblue);
+  display: block;
+  @media only screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
 .para-text{
   font-family: var(--gilroymedium);
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 1rem;
   color: var(--darkblue);
-  opacity: 0.8;
+  opacity: 0.9;
+    @media only screen and (max-width: 575px) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    @media only screen and (max-width: 991px) {
+      font-size: 16px;
+      line-height: 26px;
+    }
 }
 
 .mt-146{
   margin-top: 146px;
   @media only screen and (max-width: 991px) {
-    margin-top: 134px;
+    margin-top: 129px;
   }
   @media only screen and (max-width: 575px) {
     margin-top: 124px;
@@ -190,7 +230,7 @@ body{
       img{
         width: 200px;
         @media only screen and (max-width: 991px) {
-          width: 180px;
+          width: 160px;
         }
         @media only screen and (max-width: 575px) {
           width: 160px;
@@ -198,6 +238,9 @@ body{
       }
     }
     .navbar-nav{
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        padding-bottom: 0;
+      }
       .nav-item.active{
         .nav-link{
           color: #BD0000;
@@ -210,8 +253,15 @@ body{
       .nav-item{
         padding: 0.5rem 0.5rem;
         margin-right: 1rem;
+        &:nth-child(2){
+          display: none;
+        }
         @media only screen and (min-width: 992px) and (max-width: 1299px) {
           padding: 0.5rem 0.25rem;
+          margin-right: 0;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          margin-right: 0;
         }
         .nav-link{
           font-size: 16px;
@@ -250,6 +300,9 @@ body{
           margin-left: 1rem;
           margin-right: 0;
           box-shadow: 0 4px 12px 0 rgba(0,0,0,0.30);
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
+            padding: 0.5rem 0.5rem 0.6rem;
+          }
           @media only screen and (max-width: 991px) {
             margin-left: 0;
           }
@@ -296,17 +349,22 @@ body{
     }
   }
   .footer-cols{
-    width: 37%;
+    width: 50%;
     padding: 0 50px 0 15px;
     @media only screen and (max-width: 991px) {
       width: 100%;
     }
   }
+  .footer-cols-multiple:last-child{
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
   .footer-cols-multiple{
-    width: 21%;
+    width: 25%;
     padding: 0 15px;
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      width: 33.3333%;
+      width: 50%;
     }
     @media only screen and (max-width: 767px) {
       width: 50%;
@@ -389,8 +447,8 @@ body{
         padding: 0.4rem 0;
         &:first-child{
           background: url("../images/icons/location.svg")no-repeat;
-          background-position: top 13px left 0;
-          padding-left: 26px;
+          background-position: top 10px left 0;
+          padding-left: 28px;
           font-size: 16px;
           font-family: var(--gilroymedium);
           line-height: 26px;
@@ -427,7 +485,7 @@ body{
         }
         a{
           font-size: 16px;
-          padding-left: 26px;
+          padding-left: 28px;
           font-family: var(--gilroymedium);
           line-height: 16px;
           color: #fff;
@@ -616,6 +674,17 @@ body{
     @media only screen and (max-width: 575px) {
       padding: 2rem 0;
     }
+    ul{
+      padding: 0;
+      display: block;
+      margin: 2rem 0;
+      li{
+        list-style: none;
+        background: url("../images/icons/tick.svg")no-repeat;
+        background-position: top 6px left 0;
+        padding-left: 22px;
+      }
+    }
   }
   .achievement{
     margin: 2rem 0 2rem;
@@ -707,6 +776,7 @@ body{
           background-color: #fff;
           padding: 10px;
           border-radius: 10px;
+
           img{
             border-radius: 10px;
           }
@@ -819,6 +889,12 @@ body{
             background-color: #fff;
             padding: 20px 15px 25px;
             border-radius: 10px;
+          .para-text{
+            @media only screen and (max-width: 575px) {
+              font-size: 15px;
+              line-height: 24px;
+            }
+          }
         }
         .media{
           .media-body{
@@ -848,6 +924,7 @@ body{
           }
         }
         .start{
+          float: right;
           span{
             display: inline-block;
             img{
@@ -883,3 +960,585 @@ body{
 /*--- section testimonial end ---*/
 
 /*------------------------------- home page end -------------------------------*/
+
+
+
+/*------------------------------- home canada start -------------------------------*/
+/*--- section sub-banner start ---*/
+.section-why-canada-banner{
+  background: url("../images/why-canada-bg.png")no-repeat;
+  background-size: cover;
+  height: 450px;
+  @media only screen and (max-width: 1199px) {
+    background-position: top 0 left 25%;
+    height: 350px;
+  }
+  @media only screen and (max-width: 767px) {
+    background-position: top 0 left 25%;
+    height: 300px;
+  }
+  .banner-text{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px;
+    h1{
+      font-family: var(--gilroybold);
+      font-size: 60px;
+      line-height: 68px;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      display: block;
+      @media only screen and (max-width: 1499px) {
+        font-size: 54px;
+        line-height: 60px;
+      }
+      @media only screen and (max-width: 1199px) {
+        font-size: 48px;
+        line-height: 58px;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      span{
+        font-family: var(--gilroymedium);
+      }
+    }
+    p{
+      margin: 1.2rem 0 0.4rem;
+      max-width: 320px;
+    }
+    a{
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      margin: 1.5rem 0;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #FFF;
+      padding: 14px 40px;
+      text-align: center;
+      border-radius: 6px;
+      background-color: rgba(189,0,0,1);
+      transition: all 400ms;
+      &:hover{
+        text-decoration: none;
+        background-color: rgba(189,0,0,0.8);
+        transition: all 400ms;
+      }
+    }
+  }
+}
+/*--- section banner start ---*/
+/*--- section canada-about start ---*/
+.section-canada-about{
+  .about-left{
+    width: 90%;
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .about-right{
+    @media only screen and (max-width: 1499px) {
+      padding: 5rem 0;
+    }
+    @media only screen and (max-width: 1199px) {
+      padding: 4rem 0;
+    }
+    @media only screen and (max-width: 991px) {
+      padding: 3rem 0 0;
+    }
+    @media only screen and (max-width: 575px) {
+      padding: 2rem 0;
+    }
+  }
+  .achievement{
+    margin: 2rem 0 2rem;
+    .achivement-box{
+      width: 30%;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      border: 1px solid transparent;
+      @media only screen and (max-width: 991px) {
+        padding: 15px 10px;
+      }
+      @media only screen and (max-width: 575px) {
+        padding: 15px 10px;
+      }
+      &:hover{
+        border: 1px solid rgba(189,0,0,1);
+        background-color: rgba(189,0,0,1);
+        transition: all 400ms;
+        h4{
+          color: #fff;
+          opacity: 1;
+          transition: all 400ms;
+        }
+
+      }
+      .icons-box{
+        margin-bottom: 1rem;
+      }
+      h4{
+        font-family: var(--gilroymedium);
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 0;
+        color: var(--darkblue);
+        opacity: 0.7;
+        transition: all 400ms;
+        @media only screen and (max-width: 991px) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+        @media only screen and (max-width: 575px) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+        span{
+          display: block;
+        }
+      }
+    }
+  }
+}
+.bg-light-new{
+  background-color: #f5f5f5;
+}
+.canada-about-accordian{
+  h3{
+    padding: 20px 15px 0 15px;
+  }
+  .accordion {
+    margin: 15px 0;
+    .card {
+      border: none;
+      border-radius: 0;
+      margin-bottom: 20px;
+      h2 {
+        background:#bd0000 url("../images/icons/down-arrow.svg") no-repeat calc(100% - 10px) center;
+        background-size: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 15px;
+        color: #fff;
+        &.collapsed {
+          /*background-image: url("../images/icons/right-arrow.svg")no-repeat;*/
+          background:#bd0000 url("../images/icons/right-arroww.svg") no-repeat calc(100% - 10px) center;
+          background-size: 20px;
+          cursor: pointer;
+          font-size: 18px;
+          padding: 15px;
+          color: #fff;
+        }
+      }
+      &-body {
+        margin: 0;
+      }
+    }
+  }
+}
+/*--- section canada-about end ---*/
+/*------------------------------- home canada end -------------------------------*/
+
+
+
+/*------------------------------- services page start -------------------------------*/
+/*--- section sub-banner start ---*/
+.section-services-banner{
+  background: url("../images/service-bg.png")no-repeat;
+  background-size: cover;
+  height: 450px;
+  @media only screen and (max-width: 1199px) {
+    background-position: top 0 left 25%;
+    height: 350px;
+  }
+  @media only screen and (max-width: 767px) {
+    background-position: top 0 left 25%;
+    height: 300px;
+  }
+  .banner-text{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px;
+    h1{
+      font-family: var(--gilroybold);
+      font-size: 60px;
+      line-height: 68px;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      display: block;
+      text-align: center;
+      @media only screen and (max-width: 1499px) {
+        font-size: 54px;
+        line-height: 60px;
+      }
+      @media only screen and (max-width: 1199px) {
+        font-size: 48px;
+        line-height: 58px;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      span{
+        font-family: var(--gilroymedium);
+      }
+    }
+    p{
+      margin: 1.2rem 0 0.4rem;
+      max-width: 320px;
+    }
+    a{
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      margin: 1.5rem 0;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #FFF;
+      padding: 14px 40px;
+      text-align: center;
+      border-radius: 6px;
+      background-color: rgba(189,0,0,1);
+      transition: all 400ms;
+      &:hover{
+        text-decoration: none;
+        background-color: rgba(189,0,0,0.8);
+        transition: all 400ms;
+      }
+    }
+  }
+}
+/*--- section banner start ---*/
+
+/*--- section why-choose start ---*/
+.section-servicepage-why-choose{
+  .why-left{
+    width: 90%;
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .why-right{
+    @media only screen and (max-width: 1499px) {
+      padding: 5rem 0;
+    }
+    @media only screen and (max-width: 1199px) {
+      padding: 4rem 0;
+    }
+    @media only screen and (max-width: 991px) {
+      padding: 3rem 0 0;
+    }
+    @media only screen and (max-width: 575px) {
+      padding: 0;
+    }
+    h3{
+      font-family: var(--gilroymedium);
+      font-size: 22px;
+      line-height: 28px;
+      color: var(--darkblue);
+      margin: 1rem 0 1rem;
+      @media only screen and (max-width: 991px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    ul{
+      padding: 0;
+      display: block;
+      li{
+        list-style: none;
+        background: url("../images/icons/tick.svg")no-repeat;
+        background-position: top 6px left 0;
+        padding-left: 22px;
+      }
+    }
+  }
+}
+/*--- section why-choose end ---*/
+
+/*------------------------------- services us page start -------------------------------*/
+
+
+/*------------------------------- contact us page start -------------------------------*/
+/*--- section sub-banner start ---*/
+.section-contactus-banner{
+  background: url("../images/contact-us-bg.png")no-repeat;
+  background-size: cover;
+  height: 450px;
+  @media only screen and (max-width: 1199px) {
+    background-position: top 0 left 25%;
+    height: 350px;
+  }
+  @media only screen and (max-width: 767px) {
+    background-position: top 0 left 25%;
+    height: 300px;
+  }
+  .banner-text{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 15px;
+    h1{
+      font-family: var(--gilroybold);
+      font-size: 60px;
+      line-height: 68px;
+      margin-bottom: 0.4rem;
+      color: #fff;
+      display: block;
+      text-align: center;
+      @media only screen and (max-width: 1499px) {
+        font-size: 54px;
+        line-height: 60px;
+      }
+      @media only screen and (max-width: 1199px) {
+        font-size: 48px;
+        line-height: 58px;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      span{
+        font-family: var(--gilroymedium);
+      }
+    }
+    p{
+      margin: 1.2rem 0 0.4rem;
+      max-width: 320px;
+    }
+    a{
+      font-family: var(--gilroymedium);
+      font-size: 18px;
+      line-height: 26px;
+      margin: 1.5rem 0;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #FFF;
+      padding: 14px 40px;
+      text-align: center;
+      border-radius: 6px;
+      background-color: rgba(189,0,0,1);
+      transition: all 400ms;
+      &:hover{
+        text-decoration: none;
+        background-color: rgba(189,0,0,0.8);
+        transition: all 400ms;
+      }
+    }
+  }
+}
+/*--- section banner start ---*/
+
+.contactus-page{
+  margin: 50px 0 0 0;
+  @media only screen and (max-width: 1199px) {
+    margin-top: 20px;
+  }
+  @media only screen and (max-width: 575px) {
+    margin-top: -30px;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      list-style: none;
+      padding: 0.4rem 0;
+      &:first-child{
+        background: url("../images/icons/red-location.svg")no-repeat;
+        background-position: top 10px left 0;
+        padding-left: 28px;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9;
+      }
+      &:nth-of-type(2){
+        background: url("../images/icons/red-www.svg")no-repeat;
+        background-position: top 13px left 0;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9;
+      }
+      &:nth-of-type(3){
+        background: url("../images/icons/red-mail.svg")no-repeat;
+        background-position: top 10px left 0;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9;
+      }
+      &:nth-of-type(4){
+        background: url("../images/icons/red-phone.svg")no-repeat;
+        background-position: top 13px left 0;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9;
+        a{
+          /*&:hover{
+            color: #fff !important;
+          }*/
+        }
+      }
+      a{
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        opacity: 0.9;
+        padding-left: 28px;
+        transition: all 400ms;
+        &:hover{
+          color: #BD0000;
+          text-decoration: none;
+          opacity: 1;
+          transition: all 400ms;
+        }
+      }
+    }
+  }
+}
+/*--- section why-choose start ---*/
+.section-heythere-contact{
+  .why-left{
+    width: 90%;
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .why-right{
+    @media only screen and (max-width: 767px) {
+      padding: 3rem 0 0;
+    }
+    @media only screen and (max-width: 575px) {
+      padding: 2rem 0;
+    }
+    h3{
+      font-family: var(--gilroymedium);
+      font-size: 22px;
+      line-height: 28px;
+      color: var(--darkblue);
+      margin: 1rem 0 1rem;
+    }
+    ul{
+      padding: 0;
+      display: block;
+      li{
+        list-style: none;
+        background: url("../images/icons/tick.svg")no-repeat;
+        background-position: top 6px left 0;
+        padding-left: 22px;
+      }
+    }
+  }
+}
+/*--- section why-choose end ---*/
+/*--- contact form start ---*/
+.contact-form{
+  padding: 20px 20px 30px 20px;
+  background-color: #bd0000;
+  h3{
+    font-family: var(--gilroymedium);
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 1rem;
+    color: var(--white);
+    display: block;
+  }
+  form{
+    .form-group{
+      margin-bottom: 1.5rem;
+      .form-control{
+        border-radius: 0;
+        height: calc(1.8em + 0.9rem + 4px);
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        &:focus{
+          outline: none;
+          box-shadow: none;
+
+        }
+      }
+      .form-control-message{
+        border-radius: 0;
+        width: 100%;
+        resize: none;
+        font-family: var(--gilroymedium);
+        font-size: 18px;
+        line-height: 26px;
+        color: var(--darkblue);
+        padding: 0.6rem;
+        &:focus{
+          outline: none;
+          box-shadow: none;
+
+        }
+      }
+      ::placeholder{
+        opacity: 0.8;
+      }
+    }
+  }
+}
+/*--- contact form end ---*/
+.responsive-map{
+  margin-top: 6rem;
+  @media only screen and (max-width: 1199px) {
+    margin-top: 3rem;
+  }
+  @media only screen and (max-width: 575px) {
+    margin-top: 2rem;
+  }
+  iframe{
+    width: 100%;
+  }
+}
+.submit-btn{
+    font-family: var(--gilroymedium);
+    font-size: 18px;
+    line-height: 26px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 14px 40px;
+    text-align: center;
+    border-radius: 6px;
+    color: rgba(189,0,0,1);
+    background-color: #fff;
+    transition: all 400ms;
+    &:hover{
+      text-decoration: none;
+      color: rgba(189,0,0,1);
+      background-color: #fff;
+      transition: all 400ms;
+    }
+}
+
+/*------------------------------- contact us page end -------------------------------*/
