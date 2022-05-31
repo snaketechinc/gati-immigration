@@ -766,6 +766,12 @@ body {
       color: #000;
       opacity: 1 !important;
       margin: 0; }
+    @media only screen and (max-width: 480px) {
+      .section-testimonial .testimonial-slider .testimonial_carousel .item .media .media-body h5 {
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
     .section-testimonial .testimonial-slider .testimonial_carousel .item .media .media-body h6 {
       font-family: var(--gilroymedium);
       font-size: 12px;
@@ -785,6 +791,11 @@ body {
         display: inline-block; }
         .section-testimonial .testimonial-slider .testimonial_carousel .item .start span img {
           width: 14px; }
+      @media only screen and (max-width: 480px) {
+        .section-testimonial .testimonial-slider .testimonial_carousel .item .start span img {
+         width: 10px;
+        }
+      }
     .section-testimonial .testimonial-slider .owl-dots .owl-dot {
       margin: 2rem 0 0 0; }
       .section-testimonial .testimonial-slider .owl-dots .owl-dot span {
@@ -873,19 +884,19 @@ body {
 
 @media only screen and (max-width: 1499px) {
   .section-canada-about .about-right {
-    padding: 5rem 0; } }
+    padding: 0rem 0; } }
 
 @media only screen and (max-width: 1199px) {
   .section-canada-about .about-right {
-    padding: 4rem 0; } }
+    padding: 1rem 0; } }
 
 @media only screen and (max-width: 991px) {
   .section-canada-about .about-right {
-    padding: 3rem 0 0; } }
+    padding: 1rem 0 0; } }
 
 @media only screen and (max-width: 575px) {
   .section-canada-about .about-right {
-    padding: 2rem 0; } }
+    padding: 0; } }
 
 .section-canada-about .achievement {
   margin: 2rem 0 2rem; }
@@ -1312,3 +1323,21 @@ body {
     transition: all 400ms; }
 
 /*------------------------------- contact us page end -------------------------------*/
+
+.source{
+  width: 100%;
+  display: block;
+  padding-top: 10px;
+  font-family: var(--gilroymedium);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.source a{
+  color: #bd0000;
+  opacity: 0.8;
+}
+.source a:hover{
+  text-decoration: none;
+  opacity: 1;
+}
