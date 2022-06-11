@@ -12,6 +12,8 @@
     <!-- Owl Stylesheets -->
     <link rel="stylesheet" href="owl/owl.carousel.min.css">
     <link rel="stylesheet" href="owl/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -81,34 +83,34 @@
             <div class="col-md-8 order-md-2 col-xl-7 offset-xl-1">
                 <div class="contact-form">
                     <h3>Contact Us</h3>
-                    <form>
+                    <form id="contact-form" action="send-mail.php">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="First Name">
+                                    <input type="text" class="form-control" id="firstname" name="firstname" aria-describedby="emailHelp" placeholder="First Name" required>
                                     <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Last Name">
+                                    <input type="text" class="form-control" id="lastname" name="lastname" aria-describedby="emailHelp" placeholder="Last Name" required>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="mobilenumer" aria-describedby="emailHelp" placeholder="Mobile Number">
+                                    <input type="number" class="form-control" id="mobileNumber" name="mobileNumber" aria-describedby="emailHelp" placeholder="Mobile Number" required>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="emailid" aria-describedby="emailHelp" placeholder="Email id">
+                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email id" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea class="form-control-message" id="message" rows="3" placeholder="Message"></textarea>
+                                    <textarea class="form-control-message" id="message" name="message" rows="3" placeholder="Message" required></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12 text-center">
@@ -116,6 +118,7 @@
                             </div>
                         </div>
                     </form>
+                    <span id="success-message" class="text-white d-flex justify-content-center pt-3 text-center"></span>
                 </div>
             </div>
             <div class="col-md-4 order-md-1">
@@ -289,6 +292,32 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
 <script src="owl/owl.carousel.js"></script>
+
+<script type="application/javascript">
+    $("#contact-form").submit(function(e) {
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                $("#contact-form")[0].reset();
+                $("#success-message").text("Thank you for your inquiry! we will get back to you as soon as possible.");
+                setTimeout(() => {
+                    $("#success-message").text("");
+                }, 2000)
+                // alert("Thank you for your inquiry! we will get back to you as soon as possible."); // show response from the php script.
+            }
+        });
+
+    });
+</script>
 
 </body>
 </html>
