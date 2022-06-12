@@ -273,7 +273,6 @@ $email->addContent(
 </body>
 </html>"
 );
-$sendgrid = new \SendGrid('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');
 try {
     $response = $sendgrid->send($email);
     print $response->statusCode() . "\n";
